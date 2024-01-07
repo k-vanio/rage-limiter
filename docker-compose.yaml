@@ -9,8 +9,11 @@ services:
     build:
       context: .
     ports:
-      - "9000:9000"
+      - "8080:8080"
     environment:
       REDIS_ADDR: "redis:6379"
+      MAX_REQUEST_IP_PER_SECOND: 10
+      MAX_REQUEST_TOKEN_PER_SECOND: 20
+      TIME_LOCK_IN_SECOND: 10    
     depends_on:
       - redis
