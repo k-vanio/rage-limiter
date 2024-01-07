@@ -43,16 +43,16 @@ After setting up the project using `make up`, you can run the following commands
    ```bash
    make testTokenError
 
-3. test token success:
+3. test ip success:
 
    ```bash
-   make testTokenSuccess
+   make testIpSuccess
 
 
-4. test token Error:
+4. test ip Error:
 
    ```bash
-   make testTokenError
+   make testIpError
 
 ## Request Limitations in docker-compose.yaml
 
