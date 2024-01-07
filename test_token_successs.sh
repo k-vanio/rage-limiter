@@ -1,6 +1,10 @@
 #!/bin/bash
 
-TOKEN="any"
+generate_random_token() {
+  echo "$(date +%s | sha256sum | base64 | head -c 32)"
+}
+
+TOKEN=$(generate_random_token)
 URL="http://localhost:8080/"
 CONCURRENT_REQUESTS=100
 TOTAL_REQUESTS=20
